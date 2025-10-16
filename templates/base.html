@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Portfolio{% endblock %}</title>
+  <!-- {% if title == "Greenhouse" %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/greenhouse.css') }}">
+  {% endif %} -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles4.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <h1>Ale Boruk</h1>
+    <p data-en="Student • Developer • Ramen Enthusiast" data-es="Estudiante • Desarrollador • Entusiasta del Ramen"> Student • Developer • Ramen Enthusiast
+    </p>
+  </header>
+
+  <nav>
+    <a href="/" data-en="Home" data-es="Acerca de mí"> Home</a>
+    <a href="/projects"data-en="Projects" data-es="Proyectos"> Projects</a>
+    <a href="/experience" data-en="Experience" data-es="Experiencia laboral"> About</a>
+    <!-- <a href="/greenhouse" data-en="Greenhouse" data-es="Invernadero"> Greenhouse</a> -->
+    <button id="theme-toggle">⏾</button>
+    <button id="language-toggle" onclick="toggleLanguage()">EN/ES</button>
+  </nav>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+<!-- <footer> -->
+    <div class="social-media">
+      <div class="social-links">
+        <a href="mailto:sboruk@uwaterloo.ca" class="social-link" target="_blank" aria-label="Email"><i class="fas fa-envelope social-icon"></i></a>
+        <a href="https://github.com/alebora" class="social-link" target="_blank" aria-label="Github"><i class="fab fa-github social-icon"></i></a>
+        <a href="https://www.linkedin.com/in/sashaboruk" class="social-link" target="_blank" aria-label="Linkedin"><i class="fab fa-linkedin social-icon"></i></a>
+      </div>
+    </div>
+    <p class="copyright"> &copy; 2025 Ale Boruk</p>
+  <!-- </footer> -->
+
+  <script src="{{ url_for('static', filename='js/scripts.js') }}">
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    // Persist theme on reload
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        body.classList.add('dark');
+      }
+    });
+
+  </script>
+
+  <div id="robot-pet">
+    <img id="robot-img" src="{{ url_for('static', filename='images/robot1.gif') }}" alt="robot gif">
+  </div>
+
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+</html>

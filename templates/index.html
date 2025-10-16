@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="intro-container">
+  <div class="intro-text">
+    <h1 class="main-header" data-en="Welcome to My Portfolio" data-es="Bienvenido a mi Portafolio">
+      Welcome to My Portfolio
+    </h1>
+    <p id="intro"
+      data-en="Prev Software Engineer @ AGFA (based in Belgium!!)."
+      data-es="Trabajó previamente como ingeniero de software en AGFA (¡¡su sede está en Bélgica!!).">
+      Currently a Software Verification Engineer @ Agfa (based in Belgium!!).</span>
+    </p>
+    <p id="intro"
+      data-en="Hi! I am a lifelong learner and occasionally I make some cool stuff, but really just learning how to live life."
+      data-es="¡Hola! Soy un aprendiz de por vida y, de vez en cuando, creo cosas geniales, aunque en realidad solo estoy aprendiendo a vivir la vida.">
+      Hi! I am a lifelong learner and occasionally I make some cool stuff but really just learning how to live life.
+    </p>
+    <p id="intro"
+      data-en="I am a second year student at the University of Waterloo, I can probably be found at the nearest Ramen place 🍜 or just admiring my million plants🪴."
+      data-es="Estoy en mi segundo año en la Universidad de Waterloo, probablemente me encuentres en el lugar de ramen 🍜 más cercano o hablando con mis millones de plantas🪴.">
+      I am a second year student at the University of Waterloo, and when not falling down the rabbit hole of “I'll just perfect this one detail” I can probably be found at the nearest Ramen place 🍜 or just talking to my million plants. 🪴</span>
+    </p>
+    <p id="intro"
+      data-en="Psst ¡Yo hablo español! Pulse el botón para cambiar de lengua."
+      data-es="Psst I also speak English, go to the button at the top right to change the language.">
+      </span>
+    </p>
+
+  </div>
+  <div class="intro-image">
+    <img src="{{ url_for('static', filename='images/Headshot.jpg') }}" alt="Profile Image">
+    <!-- Ramen gif on the bottom right -->
+    <div class="ramen-gif">
+      <img src="{{ url_for('static', filename='images/ramen.gif') }}" alt="Ramen Gif">
+    </div>
+  </div>
+</div>
+{% endblock %}

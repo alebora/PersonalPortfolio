@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<h1 class="main-header" data-en="Projects" data-es="Mis Proyectos"></h1>
+
+<div class="project1">
+    <div class="project1-text">
+      <h2 class="main-header" data-en="WellRise - Hack The North 2024 🤖" data-es="Buen Despertador - Hack The North 2024 🤖">WellRise - Hack The North 2024 🤖</h2>
+      <p class="project1-description"
+         data-en="An Arduino Uno goose shaped (Go UWaterloo Warriors!) sensor device with a Flask web application to collect and monitor real-time sensor data via a dynamic website using JSON."
+         data-es="Un dispositivo sensor con forma de ganso (¡Vamos Uwaterloo Warriors!) que utiliza Arduino Uno, con una aplicación web Flask para recopilar y monitorizar datos de sensores en tiempo real a través de un sitio web dinámico utilizando JSON.">
+         n Arduino Uno goose shaped (Go UWaterloo Warriors!) sensor device with a Flask web application to collect and monitor real-time sensor data via a dynamic website using JSON.
+      </p>
+      <p class="project1-description"
+        data-en="This project integrates an Arduino Uno with a Flask web application to monitor real-time sensor data. The Arduino collects data from various sensors, which is sent to the backend in JSON format. The Flask app processes and stores the data, then displays it on a dynamic website where users can view trends and monitor sensor readings in real-time. The system combines embedded systems with a full-stack web interface for efficient data tracking and visualization."
+        data-es="Este proyecto integra un Arduino Uno con una aplicación web Flask para monitorizar datos de sensores en tiempo real. El Arduino recoge datos de varios sensores, que se envían al backend en formato JSON. La aplicación Flask procesa y almacena los datos, y luego los muestra en un sitio web dinámico donde los usuarios pueden ver las tendencias y controlar las lecturas de los sensores en tiempo real. El sistema combina sistemas integrados con una interfaz web completa para un seguimiento y una visualización eficaces de los datos.">
+        This project integrates an Arduino Uno with a Flask web application to monitor real-time sensor data. The Arduino collects data from various sensors, which is sent to the backend in JSON format. The Flask app processes and stores the data, then displays it on a dynamic website where users can view trends and monitor sensor readings in real-time. The system combines embedded systems with a full-stack web interface for efficient data tracking and visualization.
+      </p>
+      <p class="project1-description"
+        data-en="Fun fact - The physical Goose Base was designed and printed from scratch!"
+        data-es="Sabias que...¡la base física del ganso se diseñó e imprimió desde cero!">
+        Fun fact - The physical Goose Base was designed and printed from scratch!
+      </p>
+      <a href="https://github.com/alebora/WellRise_Info" class="social1-link" target="_blank" aria-label="Github"><i class="fab fa-github social1-icon"></i></a>
+    </div>
+    <div class="project1-image-wrapper">
+      <img src="../static/images/projs/wellRisePhysical.png" alt="WellRise Image" class="project1-image">
+    </div>
+</div>
+  
+
+<div class="project1">
+    <div class="project1-text">
+      <h2 class="main-header" data-en="Pantry Pal" data-es="Ayudante de Despensa">Pantry Pal</h2>
+      <p class="project1-description"
+         data-en="Full-stack web app that provides recipe suggestions using OpenAI."
+         data-es="Aplicación web full-stack que proporciona sugerencias de recetas utilizando OpenAI.">
+         Full-stack web app that provides recipe suggestions using OpenAI.
+      </p>
+      <p class="project1-description"
+        data-en="A dynamic online service focused on improving pantry management and decreasing unnecessary food spoilage. Tracks food items and offers recipe suggestions for those about to expire, helps users efficiently use their ingredients and avoid waste."
+        data-es="Un dinámico servicio en línea centrado en mejorar la gestión de la despensa y reducir el deterioro innecesario de los alimentos. Realiza un seguimiento de los alimentos y ofrece sugerencias de recetas para los que están a punto de caducar, ayuda a los usuarios a utilizar eficientemente sus ingredientes y evitar el desperdicio.">
+        A dynamic online service focused on improving pantry management and decreasing unnecessary food spoilage. Tracks food items and offers recipe suggestions for those about to expire, helps users efficiently use their ingredients and avoid waste.
+    </p>
+      <a href="https://github.com/jkmathilda/PantryPal" class="social1-link" target="_blank" aria-label="Github"><i class="fab fa-github social1-icon"></i></a>
+    </div>
+    <div class="project1-image-wrapper">
+      <img src="../static/images/projs/pantryPal.png" alt="Pantry Pal Image" class="project1-image">
+    </div>
+</div>
+
+<div class="project1">
+    <div class="project1-text">
+      <h2 class="main-header" data-en="Movie Filter" data-es="Filtro de Pelís">Movie Filter</h2>
+      <p class="project1-description"
+         data-en="Full-stack website that gives movie suggestions, using Flask with backend databases and RapidAPI."
+         data-es="Sitio web full-stack que da sugerencias de películas, usando Flask con bases de datos backend y RapidAPI.">
+         Full-stack website that gives movie suggestions, using Flask with backend databases and RapidAPI.
+      </p>
+      <p class="project1-description"
+        data-en="Flask-based web application that integrates with the MoviesDatabase API to fetch and display real-time movie and series data. It supports advanced search filtering, allowing users to query by exact title or keyword, and to specify content type."
+        data-es="Aplicación web basada en Flask que se integra con la API MoviesDatabase para obtener y mostrar datos de películas y series en tiempo real. Admite filtros de búsqueda avanzados, que permiten a los usuarios consultar por título exacto o palabra clave, y especificar el tipo de contenido.">
+        Flask-based web application that integrates with the MoviesDatabase API to fetch and display real-time movie and series data. It supports advanced search filtering, allowing users to query by exact title or keyword, and to specify content type.
+    </p>
+      <a href="https://github.com/alebora/MovieFilter" class="social1-link" target="_blank" aria-label="Github"><i class="fab fa-github social1-icon"></i></a>
+    </div>
+    <div class="project1-image-wrapper">
+      <img src="../static/images/projs/movieFilter.png" alt="Movie Filter Image" class="project1-image">
+    </div>
+</div>
+
+  {% endblock %}
