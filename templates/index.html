@@ -6,16 +6,60 @@
     <h1 class="main-header" data-en="Welcome to My Portfolio" data-es="Bienvenido a mi Portafolio">
       Welcome to My Portfolio
     </h1>
-    <p id="intro"
+
+  <p class="byline">
+    Web Dev @ Hack The 6ix
+    <!-- clickable logo only -->
+    <a href="https://hackthe6ix.com" target="_blank" rel="noopener noreferrer" class="logo-link" title="Hack The 6ix">
+      <img
+        src="{{ url_for('static', filename='images/HT6.jpeg') }}"
+        alt="Hack The 6ix logo"
+        class="logo"
+      >
+    </a>
+    <span class="sr-only">Hack The 6ix (link on logo)</span>
+  </p>
+
+
+  <p class="byline">
+    Exec @ UWaterloo Women In Computer Science
+    <!-- clickable logo only -->
+    <a href="https://wics.uwaterloo.ca/" target="_blank" rel="noopener noreferrer" class="logo-link" title="Hack The 6ix">
+      <img
+        src="{{ url_for('static', filename='images/wics.png') }}"
+        alt="WiCS Logo"
+        class="logo"
+      >
+    </a>
+    <span class="sr-only">WiCS (link on logo)</span>
+  </p>
+
+
+    <!-- <p id="intro"
       data-en="Prev Software Engineer @ AGFA (based in Belgium!!)."
       data-es="Trabajó previamente como ingeniero de software en AGFA (¡¡su sede está en Bélgica!!).">
       Currently a Software Verification Engineer @ Agfa (based in Belgium!!).</span>
+    </p> -->
+
+    <p class="byline">
+      Prev Software Engineer @ AGFA (based in Belgium!!).
+      <!-- clickable logo only -->
+      <a href="https://www.agfahealthcare.com/augmented-intelligence/" target="_blank" rel="noopener noreferrer" class="logo-link" title="Hack The 6ix">
+        <img
+          src="{{ url_for('static', filename='images/agfa.png') }}"
+          alt="AGFA logo"
+          class="logo"
+        >
+      </a>
+      <span class="sr-only">AGFA (link on logo)</span>
     </p>
-    <p id="intro"
+
+
+    <!-- <p id="intro"
       data-en="Hi! I am a lifelong learner and occasionally I make some cool stuff, but really just learning how to live life."
       data-es="¡Hola! Soy un aprendiz de por vida y, de vez en cuando, creo cosas geniales, aunque en realidad solo estoy aprendiendo a vivir la vida.">
       Hi! I am a lifelong learner and occasionally I make some cool stuff but really just learning how to live life.
-    </p>
+    </p> -->
     <p id="intro"
       data-en="I am a second year student at the University of Waterloo, I can probably be found at the nearest Ramen place 🍜 or just admiring my million plants🪴."
       data-es="Estoy en mi segundo año en la Universidad de Waterloo, probablemente me encuentres en el lugar de ramen 🍜 más cercano o hablando con mis millones de plantas🪴.">

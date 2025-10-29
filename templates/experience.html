@@ -1,73 +1,138 @@
 {% extends "base.html" %}
 {% block title %}Experience{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/experience.css') }}">
+{% endblock %}
 
 {% block content %}
-<!-- <div class="timeline-container"> -->
-  <h6 class="timeline-title" data-en="Experience" data-es="Experiencia laboral">Experience</h6>
-  <div class="timeline">
-
-    <div class="timeline-item left">
-      <!-- <div class="timeline-dot"></div> -->
-      <div class="timeline-content">
-        <h3 data-en="Web Dev @ Hack The 6ix" data-es="Web Dev en Hack The 6ix">Web Dev @ Hack The 6ix</h3>
-        <span class="timeline-date" data-en="Oct 2025 - Present" data-es="octubre 2025 - presente">Oct 2025 - Present</span>
-        <p data-en="Contributed to web features and event infrastructure for Hack the 6ix, improving participant onboarding and scaling site traffic during registration peaks."
-           data-es="Contribuyó a las funciones web y la infraestructura de eventos para Hack the 6ix, mejorando la incorporación de participantes y ampliando el tráfico del sitio durante los picos de registro.">
-           Contributed to web features and event infrastructure for Hack the 6ix, improving participant onboarding and scaling site traffic during registration peaks.
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item right">
-      <!-- <div class="timeline-dot"></div> -->
-      <div class="timeline-content">
-        <h3 data-en="Director of Publicity @ UWaterloo Women in Computer Science" data-es="Director de Publicidad en UWaterloo Women in Computer Science">Director of Publicity @ UWaterloo Women in Computer Science</h3>
-        <span class="timeline-date" data-en="Sept 2025 - Present" data-es="septiembre 2025 - presente">Sept 2025 - Present</span>
-        <p data-en="Directed digital outreach and analytics for the Women in Computer Science club, using data-driven strategies to boost engagement and event visibility."
-           data-es="Dirigí la difusión y el análisis digital para el club Mujeres en Ciencias de la Computación, utilizando estrategias basadas en datos para impulsar la participación y la visibilidad del evento.">
-           Directed digital outreach and analytics for the Women in Computer Science club, using data-driven strategies to boost engagement and event visibility.
-      </p>
-      </div>
-    </div>
-
-    <div class="timeline-item left">
-      <!-- <div class="timeline-dot"></div> -->
-      <div class="timeline-content">
-        <h3 data-en="Software Engineer @ AGFA" data-es="Ingeniero de Software en Agfa">Software Engineer @ AGFA</h3>
-        <span class="timeline-date" data-en="May 2025 - Sept 2025" data-es="mayo 2025 - septiembre 2025">May 2025 - Sept 2025</span>
-        <p data-en="Developed and maintained software solutions at Agfa to enhance medical imaging systems, improving diagnostic accuracy and workflow efficiency for healthcare professionals."
-           data-es="Desarrolló y mantuvo soluciones de software en Agfa para mejorar los sistemas de imágenes médicas, aumentando la precisión diagnóstica y la eficiencia del flujo de trabajo para los profesionales de la salud.">
-           Developed and maintained software solutions at Agfa to enhance medical imaging systems, improving diagnostic accuracy and workflow efficiency for healthcare professionals.
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item right">
-      <!-- <div class="timeline-dot"></div> -->
-      <div class="timeline-content">
-        <h3 data-en="Junior Systems Architect @ Mishra Buisness Intelligence Services" data-es="Arquitecto de Sistemas Junior en Mishra Buisness Intelligence Services">Junior Systems Architect @ Mishra Buisness Intelligence Services</h3>
-        <span class="timeline-date" data-en="May 2024 - Sept 2024" data-es="mayo 2024 - septiembre 2024">May 2024 - Sept 2024</span>
-        <p data-en="Developing and optimizing scalable system architectures for enhanced business performance."
-           data-es="Desarrollo y optimización de arquitecturas de sistemas escalables para mejorar el rendimiento empresarial.">
-           Developing and optimizing scalable system architectures for enhanced business performance.
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item left">
-      <!-- <div class="timeline-dot"></div> -->
-      <div class="timeline-content">
-        <h3 data-en="Computer Science Instructor" data-es="Instructor de Informática">Computer Science Instructor</h3>
-        <span class="timeline-date" data-en="Sept 2022 - Mar 2023" data-es="septiembre 2022 - marzo 2023">Sept 2022 - Mar 2023</span>
-        <p data-en="Computer Science Instructor to a class of 30 students."
-           data-es="Instructor de Ciencias de la ComputaciónInstructor de Ciencias de la Computación a una clase de 30 estudiantes.">
-           Computer Science Instructor to a class of 30 students.
-        </p>
-      </div>
-    </div>
-
-    <!-- Add more timeline items here -->
-
+<div class="experience-container">
+  <div class="experience-header">
+    <h6 class="experience-title" data-en="Experience" data-es="Experiencia laboral">Experience</h6>
+    <p class="experience-subtitle" data-en="My professional journey" data-es="Mi trayectoria profesional">My professional journey</p>
   </div>
-<!-- </div> -->
+
+  <div class="timeline">
+    <div class="timeline-item" data-aos="fade-right">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="company-logo-wrapper">
+          <img src="/static/images/HT6.jpeg" alt="Hack The 6ix Logo" class="company-logo" onerror="this.style.display='none'">
+        </div>
+        <div class="timeline-header">
+          <div class="timeline-badge current">Current</div>
+          <h3 data-en="Web Developer" data-es="Desarrollador Web">Web Developer</h3>
+          <p class="company" data-en="Hack The 6ix" data-es="Hack The 6ix">Hack The 6ix</p>
+          <span class="timeline-date" data-en="Oct 2025 - Present" data-es="octubre 2025 - presente">Oct 2025 - Present</span>
+        </div>
+        <p class="timeline-description" 
+           data-en="Contributed to web features and event infrastructure for Hack the 6ix, improving participant onboarding and scaling site traffic during registration peaks."
+           data-es="Contribuyó a las funciones web y la infraestructura de eventos para Hack the 6ix, mejorando la incorporación de participantes y ampliando el tráfico del sitio durante los picos de registro.">
+          Contributed to web features and event infrastructure for Hack the 6ix, improving participant onboarding and scaling site traffic during registration peaks.
+        </p>
+        <div class="timeline-tags">
+          <span class="tag">Web Development</span>
+          <span class="tag">Accessibility Design</span>
+          <span class="tag">Scalability</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-left">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="company-logo-wrapper">
+          <img src="/static/images/wics.png" alt="WiCS Logo" class="company-logo" onerror="this.style.display='none'">
+        </div>
+        <div class="timeline-header">
+          <div class="timeline-badge current">Current</div>
+          <h3 data-en="Director of Publicity" data-es="Director de Publicidad">Director of Publicity</h3>
+          <p class="company" data-en="UWaterloo Women in Computer Science" data-es="UWaterloo Women in Computer Science">UWaterloo Women in Computer Science</p>
+          <span class="timeline-date" data-en="Sept 2025 - Present" data-es="septiembre 2025 - presente">Sept 2025 - Present</span>
+        </div>
+        <p class="timeline-description" 
+           data-en="Directed digital outreach and analytics for the Women in Computer Science club, using data-driven strategies to boost engagement and event visibility."
+           data-es="Dirigí la difusión y el análisis digital para el club Mujeres en Ciencias de la Computación, utilizando estrategias basadas en datos para impulsar la participación y la visibilidad del evento.">
+          Directed digital outreach and analytics for the Women in Computer Science club, using data-driven strategies to boost engagement and event visibility.
+        </p>
+        <div class="timeline-tags">
+          <span class="tag">Digital Marketing</span>
+          <span class="tag">Analytics</span>
+          <span class="tag">Leadership</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-right">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="company-logo-wrapper">
+          <img src="/static/images/agfa.png" alt="AGFA Logo" class="company-logo" onerror="this.style.display='none'">
+        </div>
+        <div class="timeline-header">
+          <h3 data-en="Software Engineer" data-es="Ingeniero de Software">Software Engineer</h3>
+          <p class="company" data-en="AGFA" data-es="Agfa">AGFA</p>
+          <span class="timeline-date" data-en="May 2025 - Sept 2025" data-es="mayo 2025 - septiembre 2025">May 2025 - Sept 2025</span>
+        </div>
+        <p class="timeline-description" 
+           data-en="Developed and maintained software solutions at Agfa to enhance medical imaging systems, improving diagnostic accuracy and workflow efficiency for healthcare professionals."
+           data-es="Desarrolló y mantuvo soluciones de software en Agfa para mejorar los sistemas de imágenes médicas, aumentando la precisión diagnóstica y la eficiencia del flujo de trabajo para los profesionales de la salud.">
+          Developed and maintained software solutions at Agfa to enhance medical imaging systems, improving diagnostic accuracy and workflow efficiency for healthcare professionals.
+        </p>
+        <div class="timeline-tags">
+          <span class="tag">Medical Imaging</span>
+          <span class="tag">Software Architecture</span>
+          <span class="tag">Debugging</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-left">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="company-logo-wrapper">
+          <img src="/static/images/MBIS.jpeg" alt="Mishra BIS Logo" class="company-logo" onerror="this.style.display='none'">
+        </div>
+        <div class="timeline-header">
+          <h3 data-en="Junior Systems Architect" data-es="Arquitecto de Sistemas Junior">Junior Systems Architect</h3>
+          <p class="company" data-en="Mishra Business Intelligence Services" data-es="Mishra Business Intelligence Services">Mishra Business Intelligence Services</p>
+          <span class="timeline-date" data-en="May 2024 - Sept 2024" data-es="mayo 2024 - septiembre 2024">May 2024 - Sept 2024</span>
+        </div>
+        <p class="timeline-description" 
+           data-en="Developed and optimized scalable system architectures for enhanced business performance."
+           data-es="Desarrollo y optimización de arquitecturas de sistemas escalables para mejorar el rendimiento empresarial.">
+          Developed and optimized scalable system architectures for enhanced business performance.
+        </p>
+        <div class="timeline-tags">
+          <span class="tag">System Architecture</span>
+          <span class="tag">Business Intelligence</span>
+          <span class="tag">Optimization</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-right">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="company-logo-wrapper">
+          <img src="/static/images/BM.jpeg" alt="Education Logo" class="company-logo" onerror="this.style.display='none'">
+        </div>
+        <div class="timeline-header">
+          <h3 data-en="Computer Science Instructor" data-es="Instructor de Informática">Computer Science Instructor</h3>
+          <p class="company" data-en="Educational Institution" data-es="Institución Educativa">Educational Institution</p>
+          <span class="timeline-date" data-en="Sept 2022 - Mar 2023" data-es="septiembre 2022 - marzo 2023">Sept 2022 - Mar 2023</span>
+        </div>
+        <p class="timeline-description" 
+           data-en="Computer Science Instructor to a class of 30 students, teaching fundamental programming concepts and problem-solving skills."
+           data-es="Instructor de Ciencias de la Computación a una clase de 30 estudiantes, enseñando conceptos fundamentales de programación y habilidades de resolución de problemas.">
+          Computer Science Instructor to a class of 30 students, teaching fundamental programming concepts and problem-solving skills.
+        </p>
+        <div class="timeline-tags">
+          <span class="tag">Agility</span>
+          <span class="tag">Mentorship</span>
+          <span class="tag">Programming</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

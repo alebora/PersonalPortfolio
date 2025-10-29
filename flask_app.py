@@ -8,7 +8,7 @@ def home():
 
 @app.route("/projects")
 def projects():
-    return render_template("projects1.html")
+    return render_template("projects.html")
 
 @app.route("/experience")
 def experience():
