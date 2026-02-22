@@ -1,10 +1,8 @@
-// Toggle project expansion/collapse
 function toggleProject(summaryDiv) {
   const project = summaryDiv.closest(".project");
   project.classList.toggle("open");
 }
 
-// Theme toggle logic
 const toggleButton = document.getElementById('theme-toggle');
 const body = document.body;
 
@@ -20,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
- // Initialize with English as default if no language is saved in localStorage
+// Initialize with English as default if no language is saved in localStorage
 let currentLanguage = localStorage.getItem('language') || "en"; 
 
 // Function to toggle language between English and Spanish
