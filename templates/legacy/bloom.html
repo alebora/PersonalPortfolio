@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "legacy/base.html" %}
 {% block title %}Bloom{% endblock %}
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/bloom.css') }}">
@@ -103,7 +103,7 @@
 
   <p class="mem-sub">moments worth remembering ~ hover a blossom</p>
   <div class="tree-container">
-    <img src="../static/images/blossom.png" alt="cherry blossom tree" />
+    <img src="{{ url_for('static', filename='images/blossom.png') }}" alt="cherry blossom tree" />
 
     
     <div class="blossom" style="left:18%;top:7.5%">

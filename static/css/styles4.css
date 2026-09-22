@@ -21,6 +21,21 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  .legacy-banner {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .legacy-banner a {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-left: 0.35rem;
+  }
   
   body {
     /* font-family: 'Segoe UI', sans-serif; */

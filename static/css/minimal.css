@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #fdfdfc;
+  --text: #1a1a1a;
+  --dim: #6b6b6b;
+  --link: #1a1a1a;
+  --rule: #dcdcdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+main {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem 3rem;
+}
+
+header h1 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+
+header p {
+  color: var(--dim);
+  margin: 0 0 2rem;
+}
+
+section {
+  margin-bottom: 2.25rem;
+}
+
+section h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  font-weight: 600;
+  margin: 0 0 0.9rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.4rem;
+}
+
+.entry {
+  margin-bottom: 1rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: baseline;
+}
+
+.entry-year {
+  color: var(--dim);
+  margin-left: auto;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.entry-desc {
+  color: var(--dim);
+  margin: 0.15rem 0 0;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-color: var(--link);
+}
+
+.contact-links a {
+  margin-right: 0.75rem;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  color: var(--dim);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.webring {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.webring-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0e0e;
+    --text: #e8e8e8;
+    --dim: #8a8a8a;
+    --link: #e8e8e8;
+    --rule: #2a2a2a;
+  }
+}

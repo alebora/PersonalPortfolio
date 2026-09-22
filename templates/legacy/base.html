@@ -13,6 +13,9 @@
   {% block styles %}{% endblock %}
 </head>
 <body>
+  <div class="legacy-banner">
+    You're viewing the 2025 version of this site. <a href="{{ url_for('home') }}">Go to the current site →</a>
+  </div>
   <header>
     <h1>Sasha Boruk</h1>
     <p data-en="Student • Developer • Ramen Enthusiast" data-es="Estudiante • Desarrollador • Entusiasta del Ramen"> Student • Developer • Ramen Enthusiast
@@ -20,11 +23,10 @@
   </header>
 
   <nav>
-    <a href="/" data-en="Home" data-es="Acerca de mí"> Home</a>
-    <a href="/projects"data-en="Projects" data-es="Proyectos"> Projects</a>
-    <a href="/experience" data-en="Experience" data-es="Experiencia laboral"> About</a>
-    <!-- <a href="/j" data-en="J" data-es="J"> J</a> -->
-     <a href="/bloom" data-en="Bloom Log" data-es="Bloom Log"> Bloom Log</a>
+    <a href="{{ url_for('legacy.home') }}" data-en="Home" data-es="Acerca de mí"> Home</a>
+    <a href="{{ url_for('legacy.projects') }}" data-en="Projects" data-es="Proyectos"> Projects</a>
+    <a href="{{ url_for('legacy.experience') }}" data-en="Experience" data-es="Experiencia laboral"> About</a>
+    <a href="{{ url_for('legacy.bloom') }}" data-en="Bloom Log" data-es="Bloom Log"> Bloom Log</a>
     <button id="theme-toggle">⏾</button>
     <button id="language-toggle" onclick="toggleLanguage()">EN/ES</button>
   </nav>

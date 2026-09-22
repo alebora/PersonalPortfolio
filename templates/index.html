@@ -1,104 +1,102 @@
-{% extends "base.html" %}
-{% block title %}Home{% endblock %}
-{% block content %}
-<div class="intro-container">
-  <div class="intro-text">
-    <h1 class="main-header" data-en="Welcome to My Portfolio" data-es="Bienvenido a mi Portafolio">
-      Welcome to My Portfolio
-    </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sasha Boruk</title>
+  <meta name="description" content="Sasha Boruk — student and developer at the University of Waterloo.">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ramen.gif') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/minimal.css') }}">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Sasha Boruk</h1>
+      <p>I study computer science at the University of Waterloo.</p>
+    </header>
 
-  <p class="byline">
-    Full-Stack Developer @ WSIB
-    <a href="https://www.wsib.ca/en" target="_blank" rel="noopener noreferrer" class="logo-link" title="WSIB">
-      <img
-        src="{{ url_for('static', filename='images/wsib.jpeg') }}"
-        alt="WSIB logo"
-        class="logo"
-      >
-    </a>
-    <span class="sr-only">WSIB (link on logo)</span>
-  </p>
+    <section class="contact-links">
+      <h2>Contact</h2>
+      <a href="mailto:sboruk@uwaterloo.ca">email</a>
+      <a href="https://github.com/alebora" target="_blank" rel="noopener noreferrer">github</a>
+      <a href="https://www.linkedin.com/in/sashaboruk" target="_blank" rel="noopener noreferrer">linkedin</a>
+    </section>
 
-  <p class="byline">
-    Marketing Coordinator @ UW Computer Science Club
-    <a href="https://csclub.uwaterloo.ca/" target="_blank" rel="noopener noreferrer" class="logo-link" title="UW CSC">
-      <img
-        src="{{ url_for('static', filename='images/csc.jpeg') }}"
-        alt="CSC logo"
-        class="logo"
-      >
-    </a>
-    <span class="sr-only">CSC (link on logo)</span>
-  </p>
+    <section>
+      <h2>Experience</h2>
 
-  <p class="byline">
-    Web Dev @ Hack The 6ix
-    <a href="https://hackthe6ix.com" target="_blank" rel="noopener noreferrer" class="logo-link" title="Hack The 6ix">
-      <img
-        src="{{ url_for('static', filename='images/HT6.jpeg') }}"
-        alt="Hack The 6ix logo"
-        class="logo"
-      >
-    </a>
-    <span class="sr-only">Hack The 6ix (link on logo)</span>
-  </p>
+      <div class="entry">
+        <div class="entry-line">
+          <strong>Full-Stack Developer</strong> @ <a href="https://www.wsib.ca/en" target="_blank" rel="noopener noreferrer">WSIB</a>
+          <span class="entry-year">2026</span>
+        </div>
+      </div>
 
+      <div class="entry">
+        <div class="entry-line">
+          <strong>Marketing Coordinator</strong> @ <a href="https://csclub.uwaterloo.ca/" target="_blank" rel="noopener noreferrer">UW Computer Science Club</a>
+          <span class="entry-year">2025–present</span>
+        </div>
+      </div>
 
-  <p class="byline">
-    Exec @ UWaterloo Women In Computer Science
-    <a href="https://wics.uwaterloo.ca/" target="_blank" rel="noopener noreferrer" class="logo-link" title="Hack The 6ix">
-      <img
-        src="{{ url_for('static', filename='images/wics.png') }}"
-        alt="WiCS Logo"
-        class="logo"
-      >
-    </a>
-    <span class="sr-only">WiCS (link on logo)</span>
-  </p>
+      <div class="entry">
+        <div class="entry-line">
+          <strong>Web Developer</strong> @ <a href="https://hackthe6ix.com" target="_blank" rel="noopener noreferrer">Hack The 6ix</a>
+          <span class="entry-year">2025–present</span>
+        </div>
+      </div>
 
+      <div class="entry">
+        <div class="entry-line">
+          <strong>Director of Publicity</strong> @ <a href="https://wics.uwaterloo.ca/" target="_blank" rel="noopener noreferrer">UWaterloo Women in Computer Science</a>
+          <span class="entry-year">2025–present</span>
+        </div>
+      </div>
 
-    <!-- <p id="intro"
-      data-en="Prev Software Engineer @ AGFA (based in Belgium!!)."
-      data-es="Trabajó previamente como ingeniero de software en AGFA (¡¡su sede está en Bélgica!!).">
-      Currently a Software Verification Engineer @ Agfa (based in Belgium!!).</span>
-    </p> -->
+      <div class="entry">
+        <div class="entry-line">
+          <strong>Software Engineer</strong> @ <a href="https://www.agfahealthcare.com/augmented-intelligence/" target="_blank" rel="noopener noreferrer">AGFA</a>
+          <span class="entry-year">2025</span>
+        </div>
+      </div>
+    </section>
 
-    <p class="byline">
-      Prev Software Engineer @ AGFA (based in Belgium!!).
-      <a href="https://www.agfahealthcare.com/augmented-intelligence/" target="_blank" rel="noopener noreferrer" class="logo-link" title="Hack The 6ix">
-        <img
-          src="{{ url_for('static', filename='images/agfa.png') }}"
-          alt="AGFA logo"
-          class="logo"
-        >
-      </a>
-      <span class="sr-only">AGFA (link on logo)</span>
-    </p>
+    <section>
+      <h2>Projects</h2>
 
+      <div class="entry">
+        <div class="entry-line">
+          <strong><a href="https://github.com/alebora/WellRise_Info" target="_blank" rel="noopener noreferrer">WellRise</a></strong>
+          <span class="entry-year">Hack The North 2024</span>
+        </div>
+        <p class="entry-desc">Goose-shaped Arduino sensor device paired with a Flask app for real-time monitoring.</p>
+      </div>
 
-    <!-- <p id="intro"
-      data-en="Hi! I am a lifelong learner and occasionally I make some cool stuff, but really just learning how to live life."
-      data-es="¡Hola! Soy un aprendiz de por vida y, de vez en cuando, creo cosas geniales, aunque en realidad solo estoy aprendiendo a vivir la vida.">
-      Hi! I am a lifelong learner and occasionally I make some cool stuff but really just learning how to live life.
-    </p> -->
-    <p id="intro"
-      data-en="I am a second year student at the University of Waterloo, I can probably be found at the nearest Ramen place 🍜 or just admiring my million plants🪴."
-      data-es="Estoy en mi segundo año en la Universidad de Waterloo, probablemente me encuentres en el lugar de ramen 🍜 más cercano o hablando con mis millones de plantas🪴.">
-      I am a second year student at the University of Waterloo, and when not falling down the rabbit hole of “I'll just perfect this one detail” I can probably be found at the nearest Ramen place 🍜 or just talking to my million plants. 🪴</span>
-    </p>
-    <p id="intro"
-      data-en="Psst ¡Yo hablo español! Pulse el botón para cambiar de lengua."
-      data-es="Psst I also speak English, go to the button at the top right to change the language.">
+      <div class="entry">
+        <div class="entry-line">
+          <strong><a href="https://github.com/jkmathilda/PantryPal" target="_blank" rel="noopener noreferrer">Pantry Pal</a></strong>
+        </div>
+        <p class="entry-desc">Full-stack app that suggests recipes for ingredients about to expire, using OpenAI.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-line">
+          <strong><a href="https://github.com/alebora/MovieFilter" target="_blank" rel="noopener noreferrer">Movie Filter</a></strong>
+        </div>
+        <p class="entry-desc">Flask app for movie and series recommendations, backed by RapidAPI.</p>
+      </div>
+    </section>
+
+    <footer>
+      <span><a href="{{ url_for('legacy.home') }}">2025 version of this site →</a></span>
+      <span class="webring">
+        <a href="https://cs.uwatering.com/#https://boruksasha.pythonanywhere.com/?nav=prev">‹</a>
+        <a href="https://cs.uwatering.com/#https://boruksasha.pythonanywhere.com/." target="_blank">
+          <img class="webring-icon" src="https://cs.uwatering.com/icon.black.svg" alt="CS Webring">
+        </a>
+        <a href="https://cs.uwatering.com/#https://boruksasha.pythonanywhere.com/?nav=next">›</a>
       </span>
-    </p>
-
-  </div>
-  <div class="intro-image">
-    <img src="{{ url_for('static', filename='images/Headshot.jpg') }}" alt="Profile Image">
-
-    <div class="ramen-gif">
-      <img src="{{ url_for('static', filename='images/ramen.gif') }}" alt="Ramen Gif">
-    </div>
-  </div>
-</div>
-{% endblock %}
+    </footer>
+  </main>
+</body>
+</html>

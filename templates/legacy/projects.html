@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "legacy/base.html" %}
 {% block title %}Projects{% endblock %}
 
 {% block content %}
@@ -25,7 +25,7 @@
       <a href="https://github.com/alebora/WellRise_Info" class="social1-link" target="_blank" aria-label="Github"><i class="fab fa-github social1-icon"></i></a>
     </div>
     <div class="project1-image-wrapper">
-      <img src="../static/images/projs/wellRisePhysical.png" alt="WellRise Image" class="project1-image">
+      <img src="{{ url_for('static', filename='images/projs/wellRisePhysical.png') }}" alt="WellRise Image" class="project1-image">
     </div>
 </div>
   
@@ -46,7 +46,7 @@
       <a href="https://github.com/jkmathilda/PantryPal" class="social1-link" target="_blank" aria-label="Github"><i class="fab fa-github social1-icon"></i></a>
     </div>
     <div class="project1-image-wrapper">
-      <img src="../static/images/projs/pantryPal.png" alt="Pantry Pal Image" class="project1-image">
+      <img src="{{ url_for('static', filename='images/projs/pantryPal.png') }}" alt="Pantry Pal Image" class="project1-image">
     </div>
 </div>
 
@@ -66,7 +66,7 @@
       <a href="https://github.com/alebora/MovieFilter" class="social1-link" target="_blank" aria-label="Github"><i class="fab fa-github social1-icon"></i></a>
     </div>
     <div class="project1-image-wrapper">
-      <img src="../static/images/projs/movieFilter.png" alt="Movie Filter Image" class="project1-image">
+      <img src="{{ url_for('static', filename='images/projs/movieFilter.png') }}" alt="Movie Filter Image" class="project1-image">
     </div>
 </div>
 
