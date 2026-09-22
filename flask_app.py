@@ -14,10 +14,13 @@ def projects():
 def experience():
     return render_template("experience.html")
 
-@app.route('/j')
-def valentine():
-    return render_template('valentine.html')
+# @app.route('/j')
+# def valentine():
+#     return render_template('valentine.html')
 
+@app.route("/bloom")
+def bloom():
+    return render_template("bloom.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

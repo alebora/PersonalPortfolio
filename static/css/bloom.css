@@ -1,0 +1,13 @@
+.mem-wrap { text-align: center; padding: 1rem 0 2rem; }
+.mem-wrap h2 { font-size: 1.6rem; font-weight: 600; color: var(--text-color); margin: 0 0 4px; }
+.mem-wrap .mem-sub { font-size: 0.9rem; color: var(--text-color); opacity: 0.65; margin: 0 0 1rem; }
+.tree-container { position: relative; display: inline-block; width: 100%; max-width: 560px; }
+.tree-container img { width: 100%; height: auto; display: block; }
+.blossom { position: absolute; transform: translate(-50%, -50%); cursor: pointer; z-index: 5; }
+.blossom-dot { width: 22px; height: 22px; border-radius: 50%; background: #f472a0; border: 2.5px solid #fff; box-shadow: 0 0 0 2px #f9b8ce; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.blossom:hover .blossom-dot, .blossom.active .blossom-dot { transform: scale(1.4); box-shadow: 0 0 0 4px #f9b8ce; }
+.tooltip { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: #fff0f4; border: 1.5px solid #f4a7bb; border-radius: 10px; padding: 7px 13px; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 20; }
+.blossom:hover .tooltip, .blossom.active .tooltip { opacity: 1; }
+.tooltip .t-event { display: block; font-size: 12px; font-weight: 600; color: #6b2d40; }
+.tooltip .t-date { display: block; font-size: 11px; color: #c06080; margin-top: 1px; }
+.tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #f4a7bb; }

@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% block title %}Bloom{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bloom.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="mem-wrap">
+    <style>
+  #aw { position: relative; height: 100px; font-family: 'IBM Plex Sans', sans-serif; }
+  .ltr {
+    position: absolute;
+    font-size: 1.8rem;
+    transform: translateX(-50%) translateY(-50%);
+    transition: left 0.7s cubic-bezier(0.4,0,0.2,1),
+                opacity 0.45s ease,
+                color 0.5s ease,
+                font-weight 0.4s ease;
+    pointer-events: none;
+  }
+</style>
+
+<div id="aw"></div>
+
+<script>
+(function(){
+  const stage = document.getElementById('aw');
+  const CY = 52, LW = 24, GAP = 18;
+  const pink = '#f472a0', dim = '#ddb0c0', base = '#c06080';
+
+  function sw() { return stage.offsetWidth || 500; }
+
+  function positions(wordLengths) {
+    const totalW = wordLengths.reduce((a,b)=>a+b,0)*LW + (wordLengths.length-1)*GAP;
+    let x = sw()/2 - totalW/2;
+    const out = [];
+    wordLengths.forEach((len, wi) => {
+      for (let i = 0; i < len; i++) { out.push(x + LW/2); x += LW; }
+      if (wi < wordLengths.length-1) x += GAP;
+    });
+    return out;
+  }
+
+  // s=0 a=1 s=2 h=3 a=4 b=5 o=6 r=7 u=8 k=9
+  const steps = [
+    { order:[0,1,2,3,4,5,6,7,8,9], words:[5,5],
+      colors:[base,base,base,base,base,base,base,base,base,base], bolds:[0,0,0,0,0,0,0,0,0,0] },
+    { order:[5,6,7,8,9,0,1,2,3,4], words:[5,5],
+      colors:[base,base,base,base,base,base,base,base,base,base], bolds:[0,0,0,0,0,0,0,0,0,0] },
+    // { order:[5,6,9,8,7,0,1,2,3,4], words:[5,5],
+    //   colors:[base,base,base,base,base,base,base,base,base,base], bolds:[0,0,0,0,0,0,0,0,0,0] },
+    { order:[5,6,9,8,7,0,1,2,3,4], words:[2,3,2,2,1],
+      colors:[dim,dim,base,base,base,base,base,dim,dim,base], bolds:[0,0,0,0,0,0,0,0,0,0] },
+    { order:[5,6,0,1,9,8,7,4,2,3], words:[2,6,2],
+      colors:[dim,dim,pink,pink,pink,pink,pink,pink,dim,dim], bolds:[0,0,1,1,1,1,1,1,0,0] },
+  ];
+
+  function getPositions(step) {
+    const xs = positions(step.words);
+    const result = new Array(10);
+    step.order.forEach((srcIdx, posIdx) => {
+      result[srcIdx] = { x: xs[posIdx], color: step.colors[posIdx], bold: step.bolds[posIdx] };
+    });
+    return result;
+  }
+
+  const spans = 'sasha boruk'.replace(' ','').split('').map(ch => {
+    const el = document.createElement('span');
+    el.className = 'ltr';
+    el.textContent = ch;
+    el.style.opacity = '0';
+    el.style.top = CY + 'px';
+    el.style.left = sw()/2 + 'px';
+    stage.appendChild(el);
+    return el;
+  });
+
+  function applyStep(idx, animate) {
+    const data = getPositions(steps[idx]);
+    if (!animate) spans.forEach(el => el.style.transition = 'none');
+    spans.forEach((el, i) => {
+      el.style.left = data[i].x + 'px';
+      el.style.color = data[i].color;
+      el.style.fontWeight = data[i].bold ? '700' : '400';
+    });
+    if (!animate) setTimeout(() => spans.forEach(el => el.style.transition = ''), 60);
+  }
+
+  function runLoop() {
+    applyStep(0, false);
+    spans.forEach((el, i) => { setTimeout(() => { el.style.opacity = '1'; }, i * 65); });
+    [1300,2500,3700,5000].forEach((t, i) => { setTimeout(() => applyStep(i+1, true), t); });
+    setTimeout(() => {
+      spans.forEach(el => { el.style.transition = 'none'; el.style.opacity = '0'; });
+      setTimeout(runLoop, 200);
+    }, 7800);
+  }
+
+  setTimeout(runLoop, 300);
+})();
+</script>
+
+  <p class="mem-sub">moments worth remembering ~ hover a blossom</p>
+  <div class="tree-container">
+    <img src="../static/images/blossom.png" alt="cherry blossom tree" />
+
+    
+    <div class="blossom" style="left:18%;top:7.5%">
+        <div class="blossom-dot"></div>
+        <div class="tooltip tip-left">
+            <span class="t-event">Ran a WiCS event start to finish (full house!!)</span>
+            <span class="t-date">Nov. 2025</span>
+        </div>
+    </div>
+     
+    <div class="blossom" style="left:30%;top:17%">
+      <div class="blossom-dot"></div>
+        <div class="tooltip tip-left">
+            <span class="t-event">Spent $100 collectively at Coco's🧋</span>
+            <span class="t-date">Apr. 2026</span>
+        </div>
+    </div>
+
+    
+    <div class="blossom" style="left:15%;top:27%">
+      <div class="blossom-dot"></div>
+        <div class="tooltip tip-left">
+            <span class="t-event">Gave a talk at a tech conference!🤓</span>
+            <span class="t-date">Feb. 2026</span>
+        </div>
+    </div>
+
+    
+    <div class="blossom" style="left:20%;top:42%">
+      <div class="blossom-dot"></div>
+        <div class="tooltip tip-left">
+            <span class="t-event">Won a volleyball tournament🏐</span>
+            <span class="t-date">Mar. 2026</span>
+        </div>
+    </div>
+
+     
+    <div class="blossom" style="left:53%;top:5%">
+      <div class="blossom-dot"></div>
+        <div class="tooltip tip-left">
+            <span class="t-event">Organized the largest Hackathon in Toronto! HT6!</span>
+            <span class="t-date">Jul. 2026</span>
+        </div>  
+    </div>
+
+
+    <div class="blossom" style="left:51%;top:18%">
+      <div class="blossom-dot"></div>
+        <div class="tooltip tip-left">
+            <span class="t-event">Went to Google Dev Fest</span>
+            <span class="t-date">Oct. 2025</span>
+        </div> 
+    </div>
+
+    <!--
+    <div class="blossom" style="left:48%;top:32%">
+      <div class="blossom-dot"></div>
+      <div class="tooltip"><span class="t-event">event seven</span><span class="t-date">April</span></div>
+    </div>
+
+    
+    <div class="blossom" style="left:36%;top:44%">
+      <div class="blossom-dot"></div>
+      <div class="tooltip"><span class="t-event">event eight</span><span class="t-date">May</span></div>
+    </div>
+
+    
+    <div class="blossom" style="left:62%;top:4%">
+      <div class="blossom-dot"></div>
+      <div class="tooltip"><span class="t-event">event nine</span><span class="t-date">June</span></div>
+    </div>
+
+    
+    <div class="blossom" style="left:72%;top:12%">
+      <div class="blossom-dot"></div>
+      <div class="tooltip tip-right"><span class="t-event">event ten</span><span class="t-date">July</span></div>
+    </div>
+
+    
+    <div class="blossom" style="left:82%;top:22%">
+      <div class="blossom-dot"></div>
+      <div class="tooltip tip-right"><span class="t-event">event eleven</span><span class="t-date">August</span></div>
+    </div>
+
+    
+    <div class="blossom" style="left:78%;top:35%">
+      <div class="blossom-dot"></div>
+      <div class="tooltip tip-right"><span class="t-event">event twelve</span><span class="t-date">September</span></div>
+    </div>
+
+    
+    <div class="blossom" style="left:70%;top:46%">
+      <div class="blossom-dot"></div>
+      <div class="tooltip tip-right"><span class="t-event">event thirteen</span><span class="t-date">October</span></div>
+    </div>
+
+    
+    <div class="blossom" style="left:55%;top:52%">
+      <div class="blossom-dot"></div>
+      <div class="tooltip"><span class="t-event">event fourteen</span><span class="t-date">November</span></div>
+    </div>
+
+    <div class="blossom" style="left:42%;top:58%">
+      <div class="blossom-dot"></div>
+      <div class="tooltip"><span class="t-event">event fifteen</span><span class="t-date">December</span></div>
+    </div> -->
+
+  </div>
+</div>
+
+</script>
+
+
+{% endblock %}

@@ -669,3 +669,39 @@
   .logo-link:hover .logo {
     transform: scale(1.1); /* Small hover effect (optional) */
   }
+
+.webring {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  top: -10px; 
+}
+
+.webring-nav {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.webring-nav:hover {
+  color: var(--experience-title);
+}
+
+.webring-icon {
+  width: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.75;
+  transition: opacity 0.3s;
+  filter: invert(60%) sepia(60%) saturate(400%) hue-rotate(300deg) brightness(1.1);
+}
+
+body.dark .webring-icon {
+  filter: invert(80%) sepia(40%) saturate(500%) hue-rotate(180deg) brightness(1.2);
+}

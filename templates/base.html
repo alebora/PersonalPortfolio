@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ale Boruk🍜</title>
+  <title>Sasha Boruk🍜</title>
   <title>{% block title %}Portfolio{% endblock %}</title>
 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles4.css') }}">
@@ -14,7 +14,7 @@
 </head>
 <body>
   <header>
-    <h1>Ale Boruk</h1>
+    <h1>Sasha Boruk</h1>
     <p data-en="Student • Developer • Ramen Enthusiast" data-es="Estudiante • Desarrollador • Entusiasta del Ramen"> Student • Developer • Ramen Enthusiast
     </p>
   </header>
@@ -23,7 +23,8 @@
     <a href="/" data-en="Home" data-es="Acerca de mí"> Home</a>
     <a href="/projects"data-en="Projects" data-es="Proyectos"> Projects</a>
     <a href="/experience" data-en="Experience" data-es="Experiencia laboral"> About</a>
-    <a href="/j" data-en="J" data-es="J"> J</a>
+    <!-- <a href="/j" data-en="J" data-es="J"> J</a> -->
+     <a href="/bloom" data-en="Bloom Log" data-es="Bloom Log"> Bloom Log</a>
     <button id="theme-toggle">⏾</button>
     <button id="language-toggle" onclick="toggleLanguage()">EN/ES</button>
   </nav>
@@ -38,9 +39,19 @@
         <a href="mailto:sboruk@uwaterloo.ca" class="social-link" target="_blank" aria-label="Email"><i class="fas fa-envelope social-icon"></i></a>
         <a href="https://github.com/alebora" class="social-link" target="_blank" aria-label="Github"><i class="fab fa-github social-icon"></i></a>
         <a href="https://www.linkedin.com/in/sashaboruk" class="social-link" target="_blank" aria-label="Linkedin"><i class="fab fa-linkedin social-icon"></i></a>
+        <div class="webring">
+          <a class="webring-nav" href="https://cs.uwatering.com/#https://boruksasha.pythonanywhere.com/?nav=prev"> ‹ </a>
+          <a class="webring-nav logo-link" href="https://cs.uwatering.com/#https://boruksasha.pythonanywhere.com/." target="_blank">
+            <img class="webring-icon" src="https://cs.uwatering.com/icon.black.svg" alt="CS Webring" />
+          </a>
+          <a class="webring-nav" href="https://cs.uwatering.com/#https://boruksasha.pythonanywhere.com/?nav=next"> › </a>
+        </div>
       </div>
     </div>
-    <p class="copyright"> &copy; 2025 Ale Boruk</p>
+
+    
+
+    <p class="copyright"> &copy; 2026 Sasha Boruk</p>
 
   <script src="{{ url_for('static', filename='js/scripts.js') }}">
     const toggleButton = document.getElementById('theme-toggle');
